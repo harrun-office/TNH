@@ -1023,14 +1023,23 @@ header {
   display: flex;
   margin-bottom: 40px;
   position: relative;
+  opacity: 0;
+  transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .timeline-item:nth-child(odd) {
   flex-direction: row;
+  transform: translateX(-100px);
 }
 
 .timeline-item:nth-child(even) {
   flex-direction: row-reverse;
+  transform: translateX(100px);
+}
+
+.timeline-item.slide-in-visible {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 .timeline-year {
@@ -1083,12 +1092,37 @@ header {
   border-radius: 8px;
   box-shadow: var(--shadow);
   border-left: 4px solid var(--primary-color);
-  transition: var(--transition);
+  transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.25s ease;
+  opacity: 0;
 }
 
 .rule-item:hover {
   box-shadow: var(--shadow-lg);
   transform: translateX(5px);
+}
+
+.rules-list .rule-item:nth-child(odd) {
+  transform: translateX(-100px);
+}
+
+.rules-list .rule-item:nth-child(even) {
+  transform: translateX(100px);
+}
+
+.rules-list .rule-item.slide-in-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+@media (max-width: 768px) {
+  .rules-list .rule-item:nth-child(odd),
+  .rules-list .rule-item:nth-child(even) {
+    transform: translateY(30px);
+  }
+
+  .rules-list .rule-item.slide-in-visible {
+    transform: translateY(0);
+  }
 }
 
 .rule-item h3 {
@@ -2391,6 +2425,11 @@ header {
   .timeline-item {
     flex-direction: row !important;
     padding-left: 50px;
+    transform: translateY(30px) !important;
+  }
+
+  .timeline-item.slide-in-visible {
+    transform: translateY(0) !important;
   }
 
   .timeline-year {

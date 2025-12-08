@@ -1,14 +1,46 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import SectionTitle from '../components/common/SectionTitle';
 import { historyData } from '../data/history';
 
 const About = () => {
+  const timelineItemsRef = useRef([]);
+
   const highlights = [
     { label: 'Years of Service', value: '25+', icon: '⏳' },
     { label: 'Pilgrims Served', value: '50k+', icon: '🕋' },
     { label: 'Cities Covered', value: '2+', icon: '🌆' },
     { label: 'Rooms & Halls', value: '100+', icon: '🏨' },
   ];
+
+  useEffect(() => {
+    const observerOptions = {
+      threshold: 0.2,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('slide-in-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    timelineItemsRef.current.forEach((item) => {
+      if (item) {
+        observer.observe(item);
+      }
+    });
+
+    return () => {
+      timelineItemsRef.current.forEach((item) => {
+        if (item) {
+          observer.unobserve(item);
+        }
+      });
+    };
+  }, []);
 
   return (
     <div className="page-about">
@@ -45,7 +77,11 @@ const About = () => {
           <h3 className="timeline-title">Our Journey</h3>
           <div className="timeline">
             {historyData.timeline.map((item, index) => (
-              <div key={index} className="timeline-item">
+              <div 
+                key={index} 
+                className="timeline-item"
+                ref={(el) => (timelineItemsRef.current[index] = el)}
+              >
                 <div className="timeline-year">{item.year}</div>
                 <div className="timeline-content">
                   <h3>{item.event}</h3>
