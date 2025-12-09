@@ -57,7 +57,7 @@ const Footer = () => {
           <p className="footer-text">Chennai: <a href={`tel:${chennaiPhone.replace(/\s/g, '')}`} className="footer-phone-link">{chennaiPhone}</a></p>
           <p className="footer-text">Mumbai: <a href={`tel:${mumbaiPhone.replace(/\s/g, '')}`} className="footer-phone-link">{mumbaiPhone}</a></p>
           <div className="footer-cta-row">
-            <a href="tel:04426691669" className="footer-cta">Call for Feedback</a>
+            <a href="tel:04426691669" className="footer-cta ghost">Call for Feedback</a>
             <a href="mailto:info@tnhss.org" className="footer-cta ghost">Email Us</a>
           </div>
         </div>
@@ -69,16 +69,13 @@ const Footer = () => {
             <li><Link to="/accommodations">Accommodations</Link></li>
             <li><Link to="/booking-rules">Booking Rules</Link></li>
             <li><Link to="/marriage-hall">Marriage Hall</Link></li>
-            <li><Link to="/gallery">Gallery</Link></li>
-            <li><Link to="/">Feedback</Link></li>
           </ul>
         </div>
       </div>
 
       <div className="footer-bottom">
         <p className="footer-feedback">
-          Your experience matters. Call our team to share feedback:{' '}
-          <a href="tel:04426691669" className="footer-phone">044 2669 1669</a>
+          Your experience matters. Call our team to share feedback
         </p>
         <p className="footer-meta">
           <span>Privacy Policy</span>

@@ -1581,6 +1581,61 @@ header {
   }
 }
 
+/* Home mobile tweaks */
+@media (max-width: 600px) {
+  .rooms-grid {
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 16px;
+  }
+
+  .facilities-banner {
+    padding: 14px;
+    text-align: center;
+  }
+
+  .facilities-banner h4 {
+    margin-bottom: 8px;
+  }
+
+  .facilities-list {
+    justify-content: center;
+  }
+
+  .facilities-list li {
+    flex: 1 1 calc(50% - 10px);
+    min-width: 150px;
+    justify-content: center;
+    padding: 7px 10px;
+    font-size: 12px;
+  }
+
+  .hero-glass {
+    padding: 1.25rem 1rem;
+    gap: 1rem;
+  }
+
+  .hero-watermark {
+    width: 180px;
+    max-width: 70vw;
+    opacity: 0.12;
+  }
+
+  .hero-glass .hero-content {
+    padding-top: 90px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero-glass .hero-content h1 {
+    font-size: 1.85rem;
+    white-space: normal;
+  }
+
+  .hero-glass .hero-content p {
+    font-size: 0.95rem;
+  }
+}
+
 .hall-facilities,
 .hall-rent,
 .hall-essentials {
@@ -2612,9 +2667,10 @@ header {
 /* Hover */
 .footer-cta:hover {
   transform: translateY(-1px);
-  color: rgba(11, 31, 20, 0.6);
+  color: #ffffff;
   opacity: 1;
   text-decoration: none;
+  background: #e5bd3d;
 }
 
 /* Active */
@@ -2684,6 +2740,36 @@ header {
   opacity: 0.6;
 }
 
+.scroll-top-btn {
+  position: fixed;
+  right: 18px;
+  bottom: 20px;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: linear-gradient(135deg, rgba(30, 126, 52, 0.9), rgba(212, 175, 55, 0.9));
+  color: #0b1f14;
+  font-weight: 800;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  z-index: 1100;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+}
+
+.scroll-top-btn:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.3);
+}
+
+.scroll-top-btn:active {
+  transform: translateY(0) scale(0.98);
+}
+
+.scroll-top-btn:focus-visible {
+  outline: 2px solid var(--secondary-color);
+  outline-offset: 3px;
+}
 .footer-feedback {
   margin-bottom: 10px;
   font-size: 13px;
