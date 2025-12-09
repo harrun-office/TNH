@@ -66,21 +66,21 @@ const Home = () => {
           <div className="leadership-grid">
             <div className="leader-card">
               <div className="leader-photo">
-                <img src="/images/img1.jpg" alt="Leader 1" />
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Ccircle cx='100' cy='70' r='35' fill='%23e0e0e0'/%3E%3Cpath d='M 50 180 Q 50 130 100 130 Q 150 130 150 180 L 150 200 L 50 200 Z' fill='%23e0e0e0'/%3E%3C/svg%3E" alt="Leader 1" />
               </div>
               <h3 className="leader-name">Abdul Basith Bukhari</h3>
               <p className="leader-title">Chief Executive Officer</p>
             </div>
             <div className="leader-card">
               <div className="leader-photo">
-                <img src="/images/img2.jpg" alt="Leader 2" />
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Ccircle cx='100' cy='70' r='35' fill='%23e0e0e0'/%3E%3Cpath d='M 50 180 Q 50 130 100 130 Q 150 130 150 180 L 150 200 L 50 200 Z' fill='%23e0e0e0'/%3E%3C/svg%3E" alt="Leader 2" />
               </div>
               <h3 className="leader-name">Mufti Menk</h3>
               <p className="leader-title">Head of Operations</p>
             </div>
             <div className="leader-card">
               <div className="leader-photo">
-                <img src="/images/img3.jpg" alt="Leader 3" />
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Ccircle cx='100' cy='70' r='35' fill='%23e0e0e0'/%3E%3Cpath d='M 50 180 Q 50 130 100 130 Q 150 130 150 180 L 150 200 L 50 200 Z' fill='%23e0e0e0'/%3E%3C/svg%3E" alt="Leader 3" />
               </div>
               <h3 className="leader-name">Dr. Zakir Naik</h3>
               <p className="leader-title">Customer Relations Director</p>

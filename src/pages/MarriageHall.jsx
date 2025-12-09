@@ -37,15 +37,6 @@ const MarriageHall = () => {
             subtitle="Book our spacious and well-equipped marriage hall for your special occasions"
           />
 
-          <div className="facilities-banner">
-            <h4>Facilities Available</h4>
-            <ul className="facilities-list">
-              {hallData.facilities.map((item, index) => (
-                <li key={index}>{item}</li>
-              ))}
-            </ul>
-          </div>
-
           <div className="marriage-hall-content">
             <div className="hall-details">
               <h2>{hallData.name}</h2>
@@ -53,11 +44,32 @@ const MarriageHall = () => {
 
               <div className="hall-facilities">
                 <h3>Facilities</h3>
-                <ul>
-                  {hallData.facilities.map((facility, index) => (
-                    <li key={index}>{facility}</li>
-                  ))}
-                </ul>
+                <div className="facilities-grid">
+                  {hallData.facilities.map((facility, index) => {
+                    // Map facilities to icons
+                    const facilityIcons = {
+                      "Air-conditioned hall": "❄️",
+                      "Stage and sound system": "🎤",
+                      "Parking space": "🅿️",
+                      "Kitchen facilities": "🍳",
+                      "Separate dining area": "🍽️",
+                      "Decoration support": "🎨",
+                      "Prayer hall": "🕌",
+                      "Luggage storage area": "🧳",
+                      "On-site dining & kitchen": "🍲",
+                      "Housekeeping support": "🧹",
+                      "CCTV & security coverage": "📹"
+                    };
+                    const icon = facilityIcons[facility] || "✨";
+                    
+                    return (
+                      <div key={index} className="facility-card">
+                        <div className="facility-icon">{icon}</div>
+                        <div className="facility-name">{facility}</div>
+                      </div>
+                    );
+                  })}
+                </div>
               </div>
 
               <div className="hall-rent">
@@ -96,6 +108,7 @@ const MarriageHall = () => {
                   <span className="total-amount">₹{calculateTotal().toLocaleString('en-IN')}</span>
                 </div>
                 <p className="total-note">* Final amount may vary based on actual usage and duration</p>
+                <a className="btn-quote" href="tel:04426691669">Get Quotation</a>
               </div>
             </div>
           </div>

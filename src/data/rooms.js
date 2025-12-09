@@ -11,7 +11,7 @@ export const roomsData = {
     },
     {
       id: 2,
-      name: "Couple Bedroom",
+      name: "Double Bedroom",
       type: "couple",
       capacity: 2,
       amenities: ["AC", "WiFi", "Attached Bathroom", "Double Bed", "TV"],
@@ -37,7 +37,7 @@ export const roomsData = {
     },
     {
       id: 5,
-      name: "Couple Bedroom",
+      name: "Double Bedroom",
       type: "couple",
       capacity: 2,
       amenities: ["AC", "WiFi", "Attached Bathroom", "Double Bed", "TV"],

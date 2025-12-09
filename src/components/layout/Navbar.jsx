@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
+import EnquireModal from '../common/EnquireModal';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [showEnquire, setShowEnquire] = useState(false);
   const location = useLocation();
 
   const toggleMenu = () => {
@@ -42,6 +44,10 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="container">
+        <div className="nav-brand logo">
+          <img src="/images/logo.jpg" alt="TNHSS Logo" />
+          <span>TNHSS</span>
+        </div>
         <button 
           className={`hamburger-menu ${isMenuOpen ? 'active' : ''}`}
           onClick={toggleMenu}
@@ -58,8 +64,23 @@ const Navbar = () => {
           <li><NavLink to="/booking-rules" className={({ isActive }) => isActive ? "active" : ""} onClick={closeMenu}>Booking Rules</NavLink></li>
           <li><NavLink to="/marriage-hall" className={({ isActive }) => isActive ? "active" : ""} onClick={closeMenu}>Marriage Hall</NavLink></li>
         </ul>
+        <div className="nav-actions">
+          <button
+            className="nav-enquire-btn"
+            onClick={() => {
+              setShowEnquire(true);
+              closeMenu();
+            }}
+          >
+            Enquire Now
+          </button>
+        </div>
         {isMenuOpen && <div className="menu-overlay" onClick={closeMenu}></div>}
       </div>
+      <EnquireModal
+        isOpen={showEnquire}
+        onClose={() => setShowEnquire(false)}
+      />
     </nav>
   );
 };

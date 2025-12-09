@@ -10,14 +10,16 @@ const RoomCard = ({ room, className = "" }) => {
           <p className="room-description">{room.description}</p>
         )}
         <div className="room-amenities-section">
-          <h4>Amenities:</h4>
+          <h4>Amenities</h4>
           <ul className="room-amenities">
             {room.amenities.map((amenity, index) => (
-              <li key={index}>{amenity}</li>
+              <li key={index} className="room-amenity">
+                <span className="room-amenity-icon" aria-hidden="true">✓</span>
+                <span>{amenity}</span>
+              </li>
             ))}
           </ul>
         </div>
-
       </div>
     </div>
   );
