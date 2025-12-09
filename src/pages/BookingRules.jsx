@@ -36,14 +36,22 @@ const BookingRules = () => {
               <div
                 key={rule.id}
                 className="rule-item"
+                style={{ transitionDelay: `${index * 80}ms` }}
                 ref={(el) => (ruleRefs.current[index] = el)}
               >
-                <h3>{rule.title}</h3>
+                <div className="rule-meta">
+                  <span className="rule-number">{String(index + 1).padStart(2, '0')}</span>
+                  <div className="rule-meta-divider" />
+                  <h3>{rule.title}</h3>
+                </div>
                 <p>{rule.description}</p>
                 {rule.points && (
                   <ul className="rule-points">
                     {rule.points.map((point, index) => (
-                      <li key={index}>{point}</li>
+                      <li key={index}>
+                        <span className="rule-bullet" aria-hidden="true">•</span>
+                        <span>{point}</span>
+                      </li>
                     ))}
                   </ul>
                 )}

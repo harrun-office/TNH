@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useLoading } from '../contexts/LoadingContext';
 import HomeHighlights from '../components/home/HomeHighlights';
 import GlassHero from '../components/home/GlassHero';
-
+// 3267
 const PRELOADER_SHOWN_KEY = 'tnhss_preloader_shown';
 
 const Home = () => {
@@ -55,6 +55,16 @@ const Home = () => {
       <section className="section">
         <div className="container">
           <HomeHighlights />
+        </div>
+      </section>
+      <section className="section quran-verse">
+        <div className="container">
+          <div className="quran-verse-card">
+            <p className="quran-verse-text">
+              “But those who fear their Lord will have lofty chambers, above them higher chambers built up, beneath which rivers flow. [This is] the promise of Allah. Allah does not fail in His promise.”
+              <span className="quran-verse-ref">— Qur’an 39:20</span>
+            </p>
+          </div>
         </div>
       </section>
       <section className="leadership-section">
