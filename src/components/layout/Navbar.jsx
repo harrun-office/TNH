@@ -48,7 +48,7 @@ const Navbar = () => {
           <img src="/images/logo.jpg" alt="TNHSS Logo" />
           <span>TNHSS</span>
         </div>
-        <button 
+        <button
           className={`hamburger-menu ${isMenuOpen ? 'active' : ''}`}
           onClick={toggleMenu}
           aria-label="Toggle menu"

@@ -1689,13 +1689,18 @@ header {
     order: 1;
   }
 
+  .hero-glass .hero-content {
+    padding-top: 0.5rem;
+  }
+
   .hero-glass .hero-content h1 {
-    font-size: 2rem;
+    font-size: 1.9rem;
     margin-bottom: 0.75rem;
+    white-space: normal;
   }
 
   .hero-glass .hero-content p {
-    font-size: 1rem;
+    font-size: 0.95rem;
     margin-bottom: 1.25rem;
   }
 
@@ -1704,6 +1709,24 @@ header {
     width: 100%;
     margin: 0 auto;
     max-width: 400px;
+  }
+
+  /* Home page sections */
+  .page-home .section {
+    padding: 30px 0;
+  }
+
+  .quran-verse {
+    padding: 32px 0 22px;
+  }
+
+  .quran-verse-card {
+    padding: 18px 16px;
+  }
+
+  .quran-verse-text {
+    font-size: 15px;
+    line-height: 1.7;
   }
 }
 
@@ -1733,6 +1756,33 @@ header {
     max-width: 100%;
     padding: 0.6rem;
   }
+
+  /* Home page tighter mobile */
+  .container {
+    padding: 0 14px;
+  }
+
+  .quran-verse {
+    padding: 26px 0 16px;
+  }
+
+  .quran-verse-card {
+    padding: 14px 12px;
+    border-radius: 12px;
+  }
+
+  .quran-verse-text {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  .quran-verse-ref {
+    font-size: 12px;
+  }
+
+  .leadership-section {
+    padding: 26px 12px;
+  }
 }
 
 /* Home mobile tweaks */
@@ -1744,6 +1794,239 @@ header {
 
   .facilities-banner {
     padding: 14px;
+  }
+
+  /* Home page responsive */
+  .quran-verse {
+    padding: 32px 0 20px;
+  }
+
+  .quran-verse-card {
+    padding: 18px 16px;
+  }
+
+  .quran-verse-text {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .quran-verse-ref {
+    font-size: 13px;
+    margin-top: 6px;
+  }
+
+  .highlights-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    margin-top: 20px;
+  }
+
+  .hero-glass {
+    padding: 1.1rem 0.85rem;
+    gap: 0.9rem;
+  }
+
+  .hero-watermark {
+    width: 150px;
+    max-width: 60vw;
+    opacity: 0.14;
+  }
+
+  .hero-glass .hero-content {
+    padding-top: 70px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero-glass {
+    padding: 1rem 0.75rem;
+    gap: 0.85rem;
+  }
+
+  .hero-watermark {
+    width: 150px;
+    max-width: 60vw;
+    opacity: 0.14;
+  }
+
+  .hero-glass .hero-content {
+    padding-top: 64px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .highlight-card {
+    padding: 24px 18px;
+  }
+
+  .highlight-icon {
+    font-size: 40px;
+    margin-bottom: 12px;
+  }
+
+  .highlight-card h3 {
+    font-size: 17px;
+    margin-bottom: 8px;
+  }
+
+  .highlight-card p {
+    font-size: 13px;
+  }
+
+  .leadership-section {
+    padding: 32px 16px;
+  }
+
+  .leadership-header h2 {
+    font-size: 22px;
+  }
+
+  .leadership-header p {
+    font-size: 12px;
+  }
+
+  .leadership-grid {
+    gap: 18px;
+  }
+
+  .leader-card {
+    padding: 20px 16px 22px;
+  }
+
+  .leader-photo {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 12px;
+  }
+
+  .leader-name {
+    font-size: 17px;
+  }
+
+  .leader-title {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .quran-verse {
+    padding: 28px 0 18px;
+  }
+
+  .quran-verse-card {
+    padding: 16px 14px;
+    border-radius: 12px;
+  }
+
+  .quran-verse-text {
+    font-size: 14px;
+    line-height: 1.65;
+  }
+
+  .quran-verse-ref {
+    font-size: 12px;
+    margin-top: 6px;
+  }
+
+  .highlights-grid {
+    gap: 16px;
+    margin-top: 18px;
+  }
+
+  .highlight-card {
+    padding: 22px 16px;
+    border-radius: 12px;
+  }
+
+  .highlight-icon {
+    font-size: 36px;
+    margin-bottom: 10px;
+  }
+
+  .highlight-card h3 {
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+
+  .highlight-card p {
+    font-size: 12px;
+    line-height: 1.6;
+  }
+
+  .leadership-section {
+    padding: 28px 12px;
+  }
+
+  .leadership-header {
+    margin-bottom: 24px;
+  }
+
+  .leadership-header h2 {
+    font-size: 20px;
+    margin-bottom: 6px;
+  }
+
+  .leadership-header p {
+    font-size: 11px;
+  }
+
+  .leadership-grid {
+    gap: 16px;
+  }
+
+  .leader-card {
+    padding: 18px 14px 20px;
+    border-radius: 14px;
+  }
+
+  .leader-photo {
+    width: 90px;
+    height: 90px;
+    margin-bottom: 10px;
+    border-radius: 12px;
+  }
+
+  .leader-name {
+    font-size: 16px;
+    margin-bottom: 3px;
+  }
+
+  .leader-title {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 360px) {
+  .quran-verse-text {
+    font-size: 13px;
+  }
+
+  .highlight-card {
+    padding: 20px 14px;
+  }
+
+  .highlight-icon {
+    font-size: 32px;
+  }
+
+  .highlight-card h3 {
+    font-size: 15px;
+  }
+
+  .leadership-header h2 {
+    font-size: 18px;
+  }
+
+  .leader-photo {
+    width: 80px;
+    height: 80px;
+  }
+
+  .leader-name {
+    font-size: 15px;
+  }
+
+  .leadership-header {
     text-align: center;
   }
 
@@ -2983,10 +3266,40 @@ header {
 @media (max-width: 992px) {
   .highlights-grid {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 22px;
   }
 
   .rooms-grid {
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+
+  .hero-glass {
+    min-height: 30vh;
+    padding: 1.5rem 1.75rem;
+  }
+
+  .hero-glass .hero-content {
+    padding-top: 150px;
+  }
+
+  .hero-glass .hero-content h1 {
+    font-size: clamp(1.4rem, 2vw + 0.8rem, 2rem);
+  }
+
+  .quran-verse {
+    padding: 38px 0 26px;
+  }
+
+  .quran-verse-text {
+    font-size: 16px;
+  }
+
+  .leadership-section {
+    padding: 50px 20px;
+  }
+
+  .leadership-grid {
+    gap: 24px;
   }
 }
 
@@ -3018,16 +3331,44 @@ header {
 
   .navbar .container {
     padding: 0 15px;
-    justify-content: space-between;
-    height: 56px;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    height: 64px;
+    position: relative;
+  }
+
+  .nav-brand {
+    gap: 8px;
+    flex: 0 0 auto;
+  }
+
+  .nav-brand img {
+    width: 44px;
+    height: 44px;
+  }
+
+  .nav-actions {
+    margin-left: 0;
+    width: 100%;
+    justify-content: center;
+    gap: 6px;
+  }
+
+  .nav-enquire-btn {
+    padding: 8px 12px;
+    font-size: 12px;
   }
 
   .hamburger-menu {
     display: flex;
+    position: absolute;
     right: 15px;
-    position: relative;
-    top: auto;
-    transform: none;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-top: 0;
+    width: 32px;
+    height: 32px;
   }
 
   .menu-overlay {
@@ -3127,6 +3468,7 @@ header {
   .highlights-grid {
     gap: 20px;
     margin-top: 25px;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   }
 
   .highlight-card {
@@ -3141,6 +3483,45 @@ header {
   .highlight-card h3 {
     font-size: 18px;
     margin-bottom: 10px;
+  }
+
+  /* Quran Verse */
+  .quran-verse {
+    padding: 36px 0 24px;
+  }
+
+  .quran-verse-card {
+    padding: 20px 18px;
+  }
+
+  .quran-verse-text {
+    font-size: 16px;
+  }
+
+  /* Leadership Section */
+  .leadership-section {
+    padding: 45px 20px;
+  }
+
+  .leadership-header h2 {
+    font-size: 23px;
+  }
+
+  .leadership-header p {
+    font-size: 12px;
+  }
+
+  .leadership-grid {
+    gap: 22px;
+  }
+
+  .leader-card {
+    padding: 22px 18px 24px;
+  }
+
+  .leader-photo {
+    width: 105px;
+    height: 105px;
   }
 
   /* Rooms Grid */
@@ -3884,6 +4265,47 @@ header {
 
   .leadership-section {
     padding: 40px 16px;
+  }
+}
+
+/* Footer responsiveness */
+@media (max-width: 768px) {
+  .footer {
+    padding: 18px 0 12px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .footer-brand,
+  .footer-section {
+    text-align: center;
+  }
+
+  .footer-logo {
+    justify-content: center;
+  }
+
+  .footer-cta-row {
+    justify-content: center;
+  }
+
+  .footer-meta {
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-grid {
+    gap: 12px;
+  }
+
+  .footer-cta {
+    width: 100%;
+    justify-content: center;
   }
 }
 
